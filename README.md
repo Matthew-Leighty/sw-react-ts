@@ -15,13 +15,14 @@ This work took me an afternoon - let's call it 4-5hr. I enjoyed this one :)
 ## Screenshots
 
 General Flow:
-![sw1](https://github.com/Matthew-Leighty/sw-react-ts/assets/67803638/3e1ea815-d52d-4e6a-94cd-10e6b7a6fdec)
-![2](https://github.com/Matthew-Leighty/sw-react-ts/assets/67803638/a0664ac4-1be0-4c3c-8ae3-a95ed2f7bbdb)
-![sw3](https://github.com/Matthew-Leighty/sw-react-ts/assets/67803638/27670445-61f5-46e8-a81b-c39ecdc6505b)
-![sw4](https://github.com/Matthew-Leighty/sw-react-ts/assets/67803638/17dec725-be8a-4490-9fd2-86ed23df9bcf)
+![sw1](https://github.com/Matthew-Leighty/sw-react-ts/assets/67803638/544fa072-a6d0-4241-9327-6174e12e6df9)
+![2](https://github.com/Matthew-Leighty/sw-react-ts/assets/67803638/2a7467a6-9099-4a50-9075-07565ecfd0f3)
+![sw3](https://github.com/Matthew-Leighty/sw-react-ts/assets/67803638/e5c4f4d5-42be-4a3b-9094-4a9c9bc6db88)
+![sw4](https://github.com/Matthew-Leighty/sw-react-ts/assets/67803638/dd77dda9-961d-448d-b40a-20c525363f59)
+
 Error handling:
-![e1](https://github.com/Matthew-Leighty/sw-react-ts/assets/67803638/5386aa35-7872-4236-a6ec-56ff4994c027)
-![e2](https://github.com/Matthew-Leighty/sw-react-ts/assets/67803638/0b025b2e-ed3a-4b42-ae27-0517e1f9dc9b)
+![e1](https://github.com/Matthew-Leighty/sw-react-ts/assets/67803638/8f233361-ec59-42fc-9814-b20215540fda)
+![e2](https://github.com/Matthew-Leighty/sw-react-ts/assets/67803638/317baa52-df37-413a-9b60-2d084ba23666)
 
 ## My Wish list
 
