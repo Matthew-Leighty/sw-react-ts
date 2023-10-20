@@ -30,5 +30,5 @@ Error handling:
 - In the backend actually prohibit non images from being uploaded, the file input on the front end is simply asking nicely not actually validating. 
 - I would have liked to spend time on some caching
   mechanism so images don't have to be totally reloaded as much.
-- More style. I think it is functional and looks solid, but I would have enjoyed adding some more transitions and making the modal feel a little more like the home page. custom pallet.
+- More style. I think it is functional and looks solid, but I would have enjoyed adding some more transitions and making the modal feel a little more like the home page. custom pallet. Sometimes the error banner can be off screen.
 - debounce the search term, there is a lot of re-renders here in particular
