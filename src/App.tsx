@@ -1,25 +1,67 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { ThemeProvider } from "@emotion/react";
+import React, { useEffect, useMemo, useState } from "react";
+import { PaperBackground } from "./components/PaperBackground";
+import PrimarySearchAppBar from "./components/PrimarySearchAppBar";
+import { muiTheme } from "./utils/muiTheme";
+import UploadModal from "./components/UploadModal";
+import StyledImageList from "./components/ImageList";
+import LoadingIcon from "./components/LoadingIcon";
+import { MockImageApi } from "./utils/mockApi";
+import { Alert } from "@mui/material";
+import { ImageData } from "./types/Images.types";
 
 function App() {
+  const [searchTerm, setSearchTerm] = useState("");
+  const [uploadModalOpen, setUploadModalOpen] = useState(false);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string>("");
+  const [images, setImages] = useState<ImageData[]>([]);
+
+  const imageApi = useMemo(() => new MockImageApi(), []);
+
+  useEffect(() => {
+    setLoading(true);
+    imageApi.getImages(searchTerm).then((r) => {
+      if (r.error) {
+        setError(r.error);
+        return;
+      }
+      if (r.data) {
+        setImages(r.data);
+      }
+      setError("");
+      setLoading(false);
+    });
+  }, [searchTerm, imageApi]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={muiTheme}>
+      <PaperBackground>
+        {error ? <Alert severity="error">{error}</Alert> : null}
+        <PrimarySearchAppBar
+          searchTerm={searchTerm}
+          setSearchTerm={setSearchTerm}
+          setUploadModalOpen={setUploadModalOpen}
+          imageApi={imageApi}
+        />
+        {loading ? (
+          <LoadingIcon />
+        ) : (
+          <StyledImageList
+            images={images}
+            imageApi={imageApi}
+            setImages={setImages}
+            setError={setError}
+          />
+        )}
+      </PaperBackground>
+      <UploadModal
+        uploadModalOpen={uploadModalOpen}
+        setUploadModalOpen={setUploadModalOpen}
+        setImages={setImages}
+        imageApi={imageApi}
+      />
+    </ThemeProvider>
   );
 }
 
