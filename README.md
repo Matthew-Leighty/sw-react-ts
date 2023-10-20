@@ -33,3 +33,4 @@ Error handling:
 - More style. I think it is functional and looks solid, but I would have enjoyed adding some more transitions and making the modal feel a little more like the home page. custom pallet. Sometimes the error banner can be off screen.
 - debounce the search term, there is a lot of re-renders here in particular
 - pagination
+- front end tests would rock!
