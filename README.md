@@ -25,9 +25,9 @@ Error handling:
 ![e2](https://github.com/Matthew-Leighty/sw-react-ts/assets/67803638/317baa52-df37-413a-9b60-2d084ba23666)
 
 ## My Wish list
-
 - I would have liked to make a real back-end and make this a monorepo
   so they can be started together
+- In the backend actually prohibit non images from being uploaded, the file imput on the front end is simply asking nicely not actually validating. 
 - I would have liked to spend time on some caching
   mechanism so images don't have to be totally reloaded as much.
 - More style. I think it is functional and looks solid, but I would have enjoyed adding some more transitions and making the modal feel a little more like the home page. custom pallet.
