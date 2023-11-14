@@ -1,5 +1,7 @@
 # Welcome to my image gallery!
 
+This is a take home test that I think is a good code sample. The prompt was to create a front end image gallery that could view, upload, and delete images.
+
 ## General Info
 
 To start the app:
